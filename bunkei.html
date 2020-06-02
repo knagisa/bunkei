@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>文系</title>
+  </head>
+  <body>
+    <p><button id="btn">あなたの履修する文系教養科目は</button></p>
+    <p id="result"></p>
+    <script type="text/javascript">
+      const btn = document.getElementById("btn");
+      const result = document.getElementById("result")
+
+      const subjects = ["文化人類学", "コミュニケーション論", "教養特論：多文化共生論", "外国語への招待1", "表現文化論A", "Law(Civil Law) A", "国際関係論A", "社会学A", "Economics A", "統計学A", "社会技術社会論・科学技術政策A", "意思決定論A", "学びのデザイン"]
+
+      btn.addEventListener('click', () => {
+        const idx = Math.floor(Math.random() * subjects.length);
+        const subjectToTake = subjects[idx];
+        result.innerText = subjectToTake;
+      });
+    </script>
+  </body>
+</html>
